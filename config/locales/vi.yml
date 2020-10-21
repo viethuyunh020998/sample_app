@@ -1,0 +1,11 @@
+vi:
+  users:
+    index:
+      name: Ten
+      user: Nguoi dung
+      show: Hien
+      edit: sua
+      destroy: xoa
+    
+
+  

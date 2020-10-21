@@ -1,0 +1,1730 @@
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20201021101505)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201021101505"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-21 10:15:17.641682"], ["updated_at", "2020-10-21 10:15:17.641682"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-10-21 17:15:38 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/viet/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/viet/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.5ms | Allocations: 407)
+Completed 200 OK in 31ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 2342)
+
+
+Started GET "/" for ::1 at 2020-10-21 17:15:38 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/viet/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/viet/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 40.1ms | Allocations: 179)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 785)
+
+
+Started GET "/" for ::1 at 2020-10-21 17:19:06 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant ApplicaltionController
+Did you mean?  ApplicationController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-21 17:19:07 +0700
+  
+ActionController::RoutingError (uninitialized constant ApplicaltionController
+Did you mean?  ApplicationController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-21 17:19:20 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant ApplicaltionController
+Did you mean?  ApplicationController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-21 17:20:06 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#user as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 3)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 630)
+
+
+Started GET "/" for ::1 at 2020-10-21 17:20:08 +0700
+Processing by ApplicationController#user as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.1ms | Allocations: 2)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 241)
+
+
+Started GET "/" for ::1 at 2020-10-21 17:20:08 +0700
+Processing by ApplicationController#user as HTML
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | Allocations: 2)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 241)
+
+
+Started GET "/" for ::1 at 2020-10-21 17:21:59 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1385)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/viet/rails_2/chapter_2/A_toy_app/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 2006ms
+Built at: 10/21/2020 5:22:04 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 4985ms (Views: 4981.1ms | ActiveRecord: 0.6ms | Allocations: 22834)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 17:22:06 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 25.1ms | Allocations: 4006)
+  Rendered users/new.html.erb within layouts/application (Duration: 27.6ms | Allocations: 4335)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 42.2ms | ActiveRecord: 1.8ms | Allocations: 10557)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 17:23:10 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.1ms | Allocations: 750)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 11.0ms | ActiveRecord: 1.5ms | Allocations: 7516)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 17:23:11 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.4ms | Allocations: 687)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 769)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 4131)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 17:23:11 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.2ms | Allocations: 687)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 769)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4146)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 17:23:11 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.3ms | Allocations: 687)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 769)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4142)
+
+
+Started GET "/" for ::1 at 2020-10-21 17:24:20 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 658)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.6ms | Allocations: 4056)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 17:24:22 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 687)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 769)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 4126)
+
+
+Started POST "/users" for ::1 at 2020-10-21 17:24:28 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"qQYRQOAxT6KWmYuW5+6mrp9CTynMYRIIi/71GcmNIltk4qyYn8nlXtVmzodd8yXY3uUMYkIkGdEIwojBM9qKYQ==", "user"=>{"name"=>"[DN_intern_Ruby] Huynh Quoc Viet", "email"=>"vietpro.huynhh@gmail.com"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "[DN_intern_Ruby] Huynh Quoc Viet"], ["email", "vietpro.huynhh@gmail.com"], ["created_at", "2020-10-21 10:24:28.111736"], ["updated_at", "2020-10-21 10:24:28.111736"]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 17ms (ActiveRecord: 7.1ms | Allocations: 3962)
+
+
+Started GET "/users/1" for ::1 at 2020-10-21 17:24:28 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 256)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 4715)
+
+
+Started GET "/users" for ::1 at 2020-10-21 17:24:29 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 777)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 4155)
+
+
+Started GET "/users/1" for ::1 at 2020-10-21 17:24:33 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 23.5ms | ActiveRecord: 0.6ms | Allocations: 3975)
+
+
+Started GET "/users" for ::1 at 2020-10-21 17:24:37 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 763)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 4130)
+
+
+Started GET "/users" for ::1 at 2020-10-21 17:25:11 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 763)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.4ms | Allocations: 4141)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMicroposts (20201021102937)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "microposts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201021102937"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/microposts" for ::1 at 2020-10-21 17:30:52 +0700
+Started GET "/microposts" for ::1 at 2020-10-21 17:30:52 +0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MicropostsController#index as HTML
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1558)
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2757)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 112ms (Views: 98.0ms | ActiveRecord: 0.6ms | Allocations: 37001)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 118ms (Views: 110.7ms | ActiveRecord: 0.3ms | Allocations: 40769)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 17:30:53 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 636)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 4083)
+
+
+Started GET "/microposts/new" for ::1 at 2020-10-21 17:30:54 +0700
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 13.8ms | Allocations: 2818)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 3154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 23.0ms | ActiveRecord: 0.6ms | Allocations: 9421)
+
+
+Started GET "/microposts/new" for ::1 at 2020-10-21 17:34:09 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 2.3ms | Allocations: 749)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 9.7ms | ActiveRecord: 1.6ms | Allocations: 7689)
+
+
+Started POST "/microposts" for ::1 at 2020-10-21 17:34:27 +0700
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"Rt1fY55y4Z0fEnKMz/glISy4UNUCVsigHrktRMT+yU+1pilTx8o6wiJ+lvG2fb6WqaXwKhijiJcvPzVrKLmsHw==", "micropost"=>{"content"=>"sdasdsadasd", "user_id"=>"1"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (3.1ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "sdasdsadasd"], ["user_id", 1], ["created_at", "2020-10-21 10:34:27.216847"], ["updated_at", "2020-10-21 10:34:27.216847"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 30ms (ActiveRecord: 11.5ms | Allocations: 3967)
+
+
+Started GET "/microposts/1" for ::1 at 2020-10-21 17:34:27 +0700
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.8ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 253)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.8ms | Allocations: 4773)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 17:34:30 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.7ms | Allocations: 4211)
+
+
+Started GET "/microposts/1/edit" for ::1 at 2020-10-21 17:34:32 +0700
+Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/edit.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 3.9ms | Allocations: 758)
+  Rendered microposts/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 998)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 5092)
+
+
+Started PATCH "/microposts/1" for ::1 at 2020-10-21 17:34:38 +0700
+Processing by MicropostsController#update as HTML
+  Parameters: {"authenticity_token"=>"JG1k7YWLN4WyjdB8Oiul7+NBW/fP+A9uKfL2NttrvbUT7/ll/gKboW6fc6dV9OhWt2GhkA8ji+7FGwbU3W+Qug==", "micropost"=>{"content"=>"sdasdsadasd", "user_id"=>"1"}, "commit"=>"Update Micropost", "id"=>"1"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+Redirected to http://localhost:3000/microposts/1
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1175)
+
+
+Started GET "/microposts/1" for ::1 at 2020-10-21 17:34:38 +0700
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 4058)
+
+
+Started GET "/microposts/1/edit" for ::1 at 2020-10-21 17:34:39 +0700
+Processing by MicropostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/edit.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 2.5ms | Allocations: 729)
+  Rendered microposts/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 4800)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 17:34:41 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.3ms | Allocations: 4188)
+
+
+Started GET "/microposts/new" for ::1 at 2020-10-21 17:34:43 +0700
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 2.7ms | Allocations: 686)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 4191)
+
+
+Started POST "/microposts" for ::1 at 2020-10-21 17:34:48 +0700
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"7Kv8+eZVIAjUGiszGUsHKUmq4OZGNfF7tfIuhQrz9hS9dRwXeXsdJcukSPSejrsK/V8Fl3YwETynC6OhRlRgnQ==", "micropost"=>{"content"=>"", "user_id"=>""}, "commit"=>"Create Micropost"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (1.6ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", ""], ["created_at", "2020-10-21 10:34:48.139776"], ["updated_at", "2020-10-21 10:34:48.139776"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/2
+Completed 302 Found in 43ms (ActiveRecord: 13.2ms | Allocations: 3715)
+
+
+Started GET "/microposts/2" for ::1 at 2020-10-21 17:34:48 +0700
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 4062)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 17:34:50 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms | Allocations: 4310)
+
+
+Started DELETE "/microposts/2" for ::1 at 2020-10-21 17:34:52 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BCjKsKpTCcZtlia9vH56D2P1YRfsIojOTWxwft3HfRz3U7yA8+vSmVD6wsDF++G45ujB6PbXyPl86mhRMYAYTA==", "id"=>"2"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:57:in `destroy'
+  [1m[36mMicropost Destroy (1.8ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/microposts_controller.rb:57:in `destroy'
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:57:in `destroy'
+Redirected to http://localhost:3000/microposts
+Completed 302 Found in 22ms (ActiveRecord: 11.8ms | Allocations: 3765)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 17:34:53 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 762)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 4199)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mMicropost Load (0.9ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/microposts" for ::1 at 2020-10-21 17:43:02 +0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4384)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 30.3ms | ActiveRecord: 1.5ms | Allocations: 13565)
+
+
+Started GET "/" for ::1 at 2020-10-21 17:43:12 +0700
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2476)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f68080307b0>::FILL_IN):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/" for ::1 at 2020-10-21 17:43:33 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2503)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f68084dfcc0>::FILL_IN):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/" for ::1 at 2020-10-21 17:43:34 +0700
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 1549)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f68084dfcc0>::FILL_IN):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/authors/sign_up" for ::1 at 2020-10-21 17:49:41 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/authors/sign_up"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/microposts" for ::1 at 2020-10-21 17:49:45 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 1.7ms | Allocations: 7865)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 17:53:37 +0700
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 3244)
+
+
+  
+NameError (uninitialized constant #<Class:0x00007f68084dfcc0>::FILL_IN):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:17:in `new'
+Started GET "/users/new" for ::1 at 2020-10-21 17:57:43 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 5811)
+
+
+  
+NameError (undefined local variable or method `user' for #<Class:0x00007f680818c0c8>
+Did you mean?  upsert):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:17:in `new'
+Started GET "/users/new" for ::1 at 2020-10-21 17:58:51 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 6.2ms | Allocations: 2448)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2777)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 15.3ms | ActiveRecord: 0.7ms | Allocations: 10605)
+
+
+Started GET "/" for ::1 at 2020-10-21 17:58:58 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1043)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms | Allocations: 4628)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 17:59:04 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3532)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 21.4ms | ActiveRecord: 1.0ms | Allocations: 7647)
+
+
+Started GET "/microposts/new" for ::1 at 2020-10-21 17:59:06 +0700
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 6.7ms | Allocations: 1218)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1544)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 5130)
+
+
+Started GET "/microposts/new" for ::1 at 2020-10-21 17:59:50 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 1.7ms | Allocations: 749)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 832)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 8.5ms | ActiveRecord: 1.4ms | Allocations: 8044)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 17:59:52 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 794)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 0.6ms | Allocations: 4238)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 18:00:06 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.5ms | Allocations: 750)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 11.7ms | ActiveRecord: 1.6ms | Allocations: 7880)
+
+
+Started POST "/users" for ::1 at 2020-10-21 18:00:19 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"MdhRCZT1s7I9R2AryQCG+tsFIb71YmBB7xNGHjPgU//Coyc5zU1o7QArhFawhR1NXhiBQe+XIHbelV4x36c2rw==", "user"=>{"name"=>"viet", "email"=>"nam@gmail.com"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "viet"], ["email", "nam@gmail.com"], ["created_at", "2020-10-21 11:00:19.263861"], ["updated_at", "2020-10-21 11:00:19.263861"]]
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 23ms (ActiveRecord: 13.7ms | Allocations: 4115)
+
+
+Started GET "/users/2" for ::1 at 2020-10-21 18:00:19 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4768)
+
+
+Started GET "/users" for ::1 at 2020-10-21 18:00:21 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 908)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.7ms | Allocations: 4332)
+
+
+Started GET "/users/2" for ::1 at 2020-10-21 18:00:24 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:67:in `set_user'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 4047)
+
+
+Started GET "/users" for ::1 at 2020-10-21 18:00:25 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 4329)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."id" ASC LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Started GET "/users" for ::1 at 2020-10-21 18:08:15 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4425)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 31.7ms | ActiveRecord: 1.2ms | Allocations: 13939)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 18:08:17 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 7.1ms | Allocations: 2499)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2834)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 6418)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 18:08:29 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3855)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 1.1ms | Allocations: 8660)
+
+
+Started GET "/microposts/new" for ::1 at 2020-10-21 18:08:32 +0700
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 5.9ms | Allocations: 1218)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1542)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms | Allocations: 5114)
+
+
+Started POST "/microposts" for ::1 at 2020-10-21 18:08:37 +0700
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"joie6uzjZGqrjBEPfuLxWJwIl/PWymUAOTgLuD0En0DfVn4Ec81ZR7Qycsj5J017KP1ygubPhUcrwYaccaMJyQ==", "micropost"=>{"content"=>"adasdasd", "user_id"=>"4"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 3.3ms | Allocations: 846)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 929)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 11.1ms | ActiveRecord: 0.8ms | Allocations: 9964)
+
+
+Started POST "/microposts" for ::1 at 2020-10-21 21:19:03 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"dhZs8Yqkp5sj1D0CcBDe1eSmdUFPnlLQqYnTg9xfgFyFbRrB0xx8xB642X8JlUViYbvVvlVrEueYD8usMBjlDA==", "micropost"=>{"content"=>"adasdasd", "user_id"=>"2"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mMicropost Create (0.6ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "adasdasd"], ["user_id", 2], ["created_at", "2020-10-21 14:19:03.484930"], ["updated_at", "2020-10-21 14:19:03.484930"]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/microposts/3
+Completed 302 Found in 27ms (ActiveRecord: 9.0ms | Allocations: 5119)
+
+
+Started GET "/microposts/3" for ::1 at 2020-10-21 21:19:03 +0700
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 4508)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 21:19:05 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.7ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 912)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 22.1ms | ActiveRecord: 0.7ms | Allocations: 4335)
+
+
+Started GET "/microposts/3" for ::1 at 2020-10-21 21:19:06 +0700
+Processing by MicropostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:67:in `set_micropost'
+  Rendering microposts/show.html.erb within layouts/application
+  Rendered microposts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 80)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 4040)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 21:19:08 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 4304)
+
+
+Started GET "/microposts/new" for ::1 at 2020-10-21 21:19:18 +0700
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 5.0ms | Allocations: 688)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 4189)
+
+
+Started POST "/microposts" for ::1 at 2020-10-21 21:19:28 +0700
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"bLJPxNIg+DQezpnn7WIgOuO+lJWLNU28GEfN+AQW+ew9bK8qTQ7FGQFw+iBqp5wZV0tx5LswrfsKvkDcSLFvZQ==", "micropost"=>{"content"=>"sasasasasasasasasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss", "user_id"=>"4"}, "commit"=>"Create Micropost"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/microposts_controller.rb:30:in `block in create'
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 3.1ms | Allocations: 964)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1046)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 11.5ms | ActiveRecord: 0.9ms | Allocations: 8210)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 21:19:57 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 0.5ms | Allocations: 4324)
+
+
+Started GET "/users/new" for ::1 at 2020-10-21 21:20:02 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.4ms | Allocations: 695)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 4211)
+
+
+Started POST "/users" for ::1 at 2020-10-21 21:20:03 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"P9MqxpEKX5i9wE310MCfCKHEgnhEGEBnqrESym+uFWHMqFz2yLKEx4CsqYipRQS/JNkih17tAFCbNwrlg+lwMQ==", "user"=>{"name"=>"", "email"=>""}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms | Allocations: 3767)
+
+
+  
+NoMethodError (undefined method `content' for #<User:0x00007fb3eca18a68>
+Did you mean?  concern):
+  
+app/controllers/users_controller.rb:30:in `block in create'
+app/controllers/users_controller.rb:29:in `create'
+Started POST "/users" for ::1 at 2020-10-21 21:20:30 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"P9MqxpEKX5i9wE310MCfCKHEgnhEGEBnqrESym+uFWHMqFz2yLKEx4CsqYipRQS/JNkih17tAFCbNwrlg+lwMQ==", "user"=>{"name"=>"", "email"=>""}, "commit"=>"Create User"}
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.2ms | Allocations: 984)
+  Rendered users/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 9.0ms | ActiveRecord: 0.9ms | Allocations: 10020)
+
+
+Started GET "/microposts" for ::1 at 2020-10-21 21:21:24 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 1.4ms | Allocations: 7735)
+
+
+Started GET "/microposts/new" for ::1 at 2020-10-21 21:21:26 +0700
+Processing by MicropostsController#new as HTML
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 3.6ms | Allocations: 691)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 773)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 4202)
+
+
+Started POST "/microposts" for ::1 at 2020-10-21 21:22:10 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MicropostsController#create as HTML
+  Parameters: {"authenticity_token"=>"jGc+dmnDbSnXbf22Ptk5JLiTpSTpojJY1APAo9KdKqvdud6Y9u1QBMjTnnG5HIUHDGZAVdmn0h/G+k2Hnjq8Ig==", "micropost"=>{"content"=>"adsdsadsd", "user_id"=>""}, "commit"=>"Create Micropost"}
+  Rendering microposts/new.html.erb within layouts/application
+  Rendered microposts/_form.html.erb (Duration: 2.3ms | Allocations: 977)
+  Rendered microposts/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 9.9ms | ActiveRecord: 1.5ms | Allocations: 10792)
+
+
+Started GET "/microposts" for ::1 at 2020-10-22 08:14:58 +0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts"[0m
+  ↳ app/views/microposts/index.html.erb:15
+  Rendered microposts/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4667)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 522ms (Views: 23.2ms | ActiveRecord: 1.0ms | Allocations: 218708)
+
+
+Started GET "/user" for ::1 at 2020-10-22 08:15:05 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/user/new" for ::1 at 2020-10-22 08:15:09 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/user/news" for ::1 at 2020-10-22 08:15:12 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/user/news"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-10-22 08:15:40 +0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 4804)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 1.0ms | Allocations: 9959)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:15:44 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 1248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 31.8ms | ActiveRecord: 0.4ms | Allocations: 5223)
+
+
+Started GET "/users?locale=en" for ::1 at 2020-10-22 08:15:45 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 1248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 0.4ms | Allocations: 4692)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:15:45 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1240)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.4ms | Allocations: 4684)
+
+
+Started GET "/users?locale=en" for ::1 at 2020-10-22 08:15:46 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1250)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.3ms | Allocations: 4703)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:15:47 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 24.1ms | ActiveRecord: 0.4ms | Allocations: 4692)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:16:17 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms | Allocations: 4684)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:16:19 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 1239)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.4ms | Allocations: 4686)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:17:13 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1599)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.3ms | Allocations: 5964)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:17:15 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1276)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.6ms | Allocations: 4722)
+
+
+Started GET "/users?locale=en" for ::1 at 2020-10-22 08:17:16 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 1784)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.5ms | Allocations: 5635)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:17:17 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1263)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.4ms | Allocations: 4716)
+
+
+Started GET "/users?locale=en" for ::1 at 2020-10-22 08:17:17 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1767)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.3ms | Allocations: 5113)
+
+
+Started GET "/users?locale=en" for ::1 at 2020-10-22 08:17:32 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2070)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.2ms | Allocations: 6325)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:17:34 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1276)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 29.0ms | ActiveRecord: 1.2ms | Allocations: 5248)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:19:43 +0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5296)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 1.0ms | Allocations: 92240)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 1)):
+    17:       <tr>
+    18:         <td><%= user.name %></td>
+    19:         <td><%= user.email %></td>
+    20:         <td><%= link_to  t ".show", user %></td>
+    21:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    22:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    23:       </tr>
+  
+app/views/users/index.html.erb:20
+app/views/users/index.html.erb:16
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:19:50 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1194)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 2386)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<%= link_to "English", locale:"en" %>
+<%= link_to "Vietnamese", locale:"vi" %>
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t ".name"%></th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to <%= t ".show" %>, user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <%= link_to "English", locale:"en" %>
+3:    <%= link_to "Vietnamese", locale:"vi" %>
+4:    <h1>Users</h1>
+5:    
+6:    <table>
+7:      <thead>
+8:        <tr>
+9:          <th><%= t ".name"%></th>
+10:          <th>Email</th>
+11:          <th colspan="3"></th>
+12:        </tr>
+13:      </thead>
+14:    
+15:      <tbody>
+16:        <% @users.each do |user| %>
+17:          <tr>
+18:            <td><%= user.name %></td>
+19:            <td><%= user.email %></td>
+20:            <td><%= link_to <%= t ".show" %>, user %></td>
+21:            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+22:            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+23:          </tr>
+24:        <% end %>
+25:      </tbody>
+26:    </table>
+27:    
+28:    <br>
+29:    
+30:    <%= link_to 'New User', new_user_path %>
+  
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:20:24 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 1616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 53.9ms | ActiveRecord: 0.6ms | Allocations: 5991)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:20:30 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 1276)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 0.6ms | Allocations: 4714)
+
+
+Started GET "/users?locale=en" for ::1 at 2020-10-22 08:20:31 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1767)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.4ms | Allocations: 5631)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:20:32 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1264)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 0.6ms | Allocations: 4713)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:20:52 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 1606)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 41.6ms | ActiveRecord: 0.8ms | Allocations: 5961)
+
+
+Started GET "/users?locale=en" for ::1 at 2020-10-22 08:20:53 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 2182)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 37.1ms | ActiveRecord: 0.7ms | Allocations: 6041)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:20:54 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 0.4ms | Allocations: 4729)
+
+
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:21:56 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1193)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms | Allocations: 88129)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<%= link_to "English", locale:"en" %>
+<%= link_to "Vietnamese", locale:"vi" %>
+<h1><%=t".user"%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t ".name"%></th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to "Show", user %></td>
+        <td><%= link_to "Edit", edit_user_path(user) %></td>
+        <td><%= link_to "Destroy", user, method: :delete, data: { confirm: "<%=t "Ban co chac chan"%>" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New User", new_user_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <%= link_to "English", locale:"en" %>
+3:    <%= link_to "Vietnamese", locale:"vi" %>
+4:    <h1><%=t".user"%></h1>
+5:    
+6:    <table>
+7:      <thead>
+8:        <tr>
+9:          <th><%= t ".name"%></th>
+10:          <th>Email</th>
+11:          <th colspan="3"></th>
+12:        </tr>
+13:      </thead>
+14:    
+15:      <tbody>
+16:        <% @users.each do |user| %>
+17:          <tr>
+18:            <td><%= user.name %></td>
+19:            <td><%= user.email %></td>
+20:            <td><%= link_to "Show", user %></td>
+21:            <td><%= link_to "Edit", edit_user_path(user) %></td>
+22:            <td><%= link_to "Destroy", user, method: :delete, data: { confirm: "<%=t "Ban co chac chan"%>" } %></td>
+23:          </tr>
+24:        <% end %>
+25:      </tbody>
+26:    </table>
+27:    
+28:    <br>
+29:    
+30:    <%= link_to "New User", new_user_path %>
+  
+app/views/users/index.html.erb:22: syntax error, unexpected constant, expecting '}'
+app/views/users/index.html.erb:22: syntax error, unexpected '}', expecting ')'
+app/views/users/index.html.erb:23: unknown regexp options - tr
+app/views/users/index.html.erb:26: unknown regexp options - tabl
+app/views/users/index.html.erb:28: syntax error, unexpected '<'
+app/views/users/index.html.erb:33: unterminated string meets end of file
+app/views/users/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected constant, expecting '}'
+app/views/users/index.html.erb:22: syntax error, unexpected '}', expecting ')'
+app/views/users/index.html.erb:23: unknown regexp options - tr
+app/views/users/index.html.erb:26: unknown regexp options - tabl
+app/views/users/index.html.erb:28: syntax error, unexpected '<'
+app/views/users/index.html.erb:33: unterminated string meets end of file
+app/views/users/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected constant, expecting '}'
+app/views/users/index.html.erb:22: syntax error, unexpected '}', expecting ')'
+app/views/users/index.html.erb:23: unknown regexp options - tr
+app/views/users/index.html.erb:26: unknown regexp options - tabl
+app/views/users/index.html.erb:28: syntax error, unexpected '<'
+app/views/users/index.html.erb:33: unterminated string meets end of file
+app/views/users/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected constant, expecting '}'
+app/views/users/index.html.erb:22: syntax error, unexpected '}', expecting ')'
+app/views/users/index.html.erb:23: unknown regexp options - tr
+app/views/users/index.html.erb:26: unknown regexp options - tabl
+app/views/users/index.html.erb:28: syntax error, unexpected '<'
+app/views/users/index.html.erb:33: unterminated string meets end of file
+app/views/users/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected constant, expecting '}'
+app/views/users/index.html.erb:22: syntax error, unexpected '}', expecting ')'
+app/views/users/index.html.erb:23: unknown regexp options - tr
+app/views/users/index.html.erb:26: unknown regexp options - tabl
+app/views/users/index.html.erb:28: syntax error, unexpected '<'
+app/views/users/index.html.erb:33: unterminated string meets end of file
+app/views/users/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected constant, expecting '}'
+app/views/users/index.html.erb:22: syntax error, unexpected '}', expecting ')'
+app/views/users/index.html.erb:23: unknown regexp options - tr
+app/views/users/index.html.erb:26: unknown regexp options - tabl
+app/views/users/index.html.erb:28: syntax error, unexpected '<'
+app/views/users/index.html.erb:33: unterminated string meets end of file
+app/views/users/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/users?locale=vi" for ::1 at 2020-10-22 08:23:02 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"locale"=>"vi"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1208)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 2408)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<%= link_to "English", locale:"en" %>
+<%= link_to "Vietnamese", locale:"vi" %>
+<h1><%=t".user"%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t ".name"%></th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to "Show", user %></td>
+        <td><%= link_to "Edit", edit_user_path(user) %></td>
+        <td><%= link_to <h4><%=t ".destroy"%></h4>, user, method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New User", new_user_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <%= link_to "English", locale:"en" %>
+3:    <%= link_to "Vietnamese", locale:"vi" %>
+4:    <h1><%=t".user"%></h1>
+5:    
+6:    <table>
+7:      <thead>
+8:        <tr>
+9:          <th><%= t ".name"%></th>
+10:          <th>Email</th>
+11:          <th colspan="3"></th>
+12:        </tr>
+13:      </thead>
+14:    
+15:      <tbody>
+16:        <% @users.each do |user| %>
+17:          <tr>
+18:            <td><%= user.name %></td>
+19:            <td><%= user.email %></td>
+20:            <td><%= link_to "Show", user %></td>
+21:            <td><%= link_to "Edit", edit_user_path(user) %></td>
+22:            <td><%= link_to <h4><%=t ".destroy"%></h4>, user, method: :delete, data: { confirm: "Are you sure?" } %></td>
+23:          </tr>
+24:        <% end %>
+25:      </tbody>
+26:    </table>
+27:    
+28:    <br>
+29:    
+30:    <%= link_to "New User", new_user_path %>
+  
+app/views/users/index.html.erb:22: syntax error, unexpected '<'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected '<'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected '<'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected '<'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected '<'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:22: syntax error, unexpected '<'
+app/views/users/index.html.erb:24: syntax error, unexpected `end', expecting ')'
+app/views/users/index.html.erb:33: syntax error, unexpected `end', expecting ')'
