@@ -1,2 +1,8 @@
 vi:
-  title: "SampleApp"
+  title: 'xin chao'
+  static_pages:
+    home:
+      hello: "xin chao"
+
+    help:
+      suport: "ho tro"
