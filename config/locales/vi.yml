@@ -42,6 +42,7 @@ vi:
       password: "Mật khẩu"
       newuser: "Người dùng mới"
       signup: "Đăng kí ngay!"
+      remember: <span>Hãy nhớ tôi trên máy tính này</span>
   users_control:
     create: "Chào mừng bạn đến với Ứng dụng mẫu!"
   error_messages:
