@@ -1,15 +1,23 @@
 en:
+  base:
+    title: "| Ruby on Rails Tutorial Sample App"
+    home: "Home"
+    help: "Help"
+  layouts:
+    _header:
+      sampleapp: "Sample App"
+      home: "Home"
+      help: "Help"
+      login: "Login"
   static_pages:
     home:
-      sampleapp: "Welcome to the Sample App"
-      thisissampleapp: "This is the home page for the"
-      sample_application: "sample application."
-      signup: "Sign up now!"
+      sampleapp: "Wellcome to  Sample App"
+      thisissampleapp: "This is home page"
+      sample_application: "Sample App"
+      signup: "Sign Up now!"
       rbor: "Ruby on Rails Tutorial"
     help:
-      get_help: "Get help on the Ruby on Rails Tutorial at the"
+      get_help: "Get help with ruby on Rails Guides at"
       rthp: "Rails Tutorial help page"
-      page_help: "https://www.railstutorial.org/help"
-      page_book: "https://www.railstutorial.org/book"
-      to_get: "To get help on this sample app, see the"
-      rort: "Ruby on Rails Tutorial book"
+      to_get: "To get help with this sample app, see"
+      rort: "Ruby on Rails Guide"
