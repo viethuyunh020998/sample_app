@@ -1,0 +1,10 @@
+vi:
+  title: 'xin chao'
+  static_pages:
+    home:
+      hello: "xin chao"
+
+    help:
+      suport: "ho tro"
+  english:  "Tiếng Anh"
+  vietnamese : "Tiếng Việt"
