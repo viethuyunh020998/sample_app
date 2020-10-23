@@ -22,7 +22,7 @@ module SessionsHelper
   end
 
   def current_user? user
-    user && user == current_user
+    user == current_user
   end
 
   def redirect_back_or default
@@ -46,7 +46,7 @@ module SessionsHelper
 
   def log_out
     forget(current_user)
-    session.delete(:user_id)
+    session.delete :user_id
     @current_user = nil
   end
 end
