@@ -5,6 +5,7 @@ $color-footer:#777;
 $color-footera:#555;
 $color-footer-hover:#222;
 $color-error_explanation: #FF3300;
+$gray-lighter: #D3D3D3;
 
 /* universal */
 body {
@@ -162,4 +163,16 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+/* Users index */
+.users {
+  list-style: none;
+  margin: 10;
+  li {
+    overflow: auto;
+    margin: 10px ;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
 }

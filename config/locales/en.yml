@@ -34,19 +34,41 @@ en:
       confirmation: "Confirmation Password"
       create_account: "Create my account"
       error: "The form contains"
-  users_control:
-  warning: "can't find the user"
-  sessions_control:
-    danger: ""
+    edit:
+      title: "Edit User"
+      h1: <h1>Update your profile</h1>
+      name: "Name"
+      password: "Password"
+      password_conf: "password_confirmation"
+      savechanges: "Save changes"
+      change: "Change"
+    index:
+      title: "Index"
+      h1: <h1>All users</h1>
+    user_html:
+      delete: "Delete"
+      confirm: "You Sure ?"
   sessions:
     new:
       login: "Login"
       password: "Password"
       newuser: "New User!"
-      signup: "Sign up now!"
       remember: <span>Remember me on this computer</span>
+  sessions_control:
+    danger: "Invalid email/password combination"
+    message: "Account not activated."
+    message_2: "Check your email for the activation link."
   users_control:
-  create: "Welcome to the Sample App!"
+    checkemail: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn"
+    show: "User does not exist"
+    update: "Profile updated"
+    destroy: "User deleted"
+    nodestroy: "Can not delete user"
+    danger: "Please login !"
+    found: "User not found!"
+  account_control:
+    success: "Account activated!"
+    danger: "Invalid activation link"
   error_messages:
     contains: "The form contains %{errors}"
     error: "error"
