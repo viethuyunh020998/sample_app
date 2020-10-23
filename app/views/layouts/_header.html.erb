@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <%= link_to t(".english"), locale: :en %>
+  <%= link_to t(".vietnamese"), locale: :vi %>
+  <div class="container">
+    <%= link_to t("layouts._header.sampleapp"), "#", id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t("layouts._header.Home"), home_path %></li>
+        <li><%= link_to t("layouts._header.Help"), help_path %></li>
+        <li><%= link_to t("layouts._header.Login"), "#" %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
