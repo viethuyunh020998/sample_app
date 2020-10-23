@@ -36,6 +36,13 @@ vi:
       error: "Biểu mẫu chứa"
   users_control:
     warning: "không tìm thấy người dùng"
+  sessions:
+    new:
+      login: "đăng nhập"
+      password: "Mật khẩu"
+      newuser: "Người dùng mới"
+      signup: "Đăng kí ngay!"
+  users_control:
     create: "Chào mừng bạn đến với Ứng dụng mẫu!"
   error_messages:
     contains: "Biểu mẫu chứa %{errors}"

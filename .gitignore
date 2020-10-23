@@ -43,6 +43,7 @@ yarn-debug.log*
 .browserslistrc
 /config/database.yml
 /test
+/.framgia-ci-reports/rubocop.xml
 
 config/settings.local.yml
 config/settings/*.local.yml
