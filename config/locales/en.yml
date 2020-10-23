@@ -20,6 +20,7 @@ en:
       sample_application: "Sample App"
       signup: "Sign Up now!"
       rbor: "Ruby on Rails Tutorial"
+      h3: <h3>Micropost Feed</h3>
     help:
       get_help: "Get help with ruby on Rails Guides at"
       rthp: "Rails Tutorial help page"
@@ -48,6 +49,14 @@ en:
     user_html:
       delete: "Delete"
       confirm: "You Sure ?"
+  users_control:
+    checkemail: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn"
+    show: "User does not exist"
+    update: "Profile updated"
+    destroy: "User deleted"
+    nodestroy: "Can not delete user"
+    danger: "Please login !"
+    found: "User not found!"
   sessions:
     new:
       login: "Login"
@@ -59,14 +68,6 @@ en:
   sessions_control:
     danger: "Invalid email/password combination"
     message: "Account not activated.Check your email for the activation link."
-  users_control:
-    checkemail: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn"
-    show: "User does not exist"
-    update: "Profile updated"
-    destroy: "User deleted"
-    nodestroy: "Can not delete user"
-    danger: "Please login !"
-    found: "User not found!"
   account_control:
     success: "Account activated!"
     danger: "Invalid activation link"
@@ -108,3 +109,24 @@ en:
     forgot: "Forgot password"
     h1: <h1>Forgot password</h1>
     submit: "Submit"
+  micropost:
+    model:
+      message: "must be a valid image formart"
+      message2: "should be less than 5MB"
+    controller:
+      success: "The post was successful"
+      destroy: "The post was successfully deleted"
+      warning: " The post was unsuccessfully deleted "
+      danger: "Access error"
+    html:
+      posted: "Posted"
+      delete: "Delete"
+      confirm: "You sure?"
+  shared:
+    usefinfo:
+      view: "View my profile"
+      micropost: "micropost"
+    micropost:
+      placeholder: "Compose new micropost..."
+      submit: "Post"
+      image: "image/jpeg,image/gif,image/png"

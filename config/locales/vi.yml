@@ -20,6 +20,7 @@ vi:
       sample_application: "ứng dụng mẫu"
       signup: "Đăng kí ngay"
       rbor: "Ruby on Rails Tutorial"
+      h3: <h3>Nguồn cấp dữ liệu vi mô</h3>
     help:
       get_help: "Nhận trợ giúp về Hướng dẫn Ruby on Rails tại"
       rthp: "Rails Tutorial help page"
@@ -49,7 +50,9 @@ vi:
       delete: "Xóa bỏ"
       confirm: "Bạn chắc chắn ?"
   users_control:
-    checkemail: "Welcome to the Sample App!"
+    checkemail:
+      info: "Welcome to the Sample App!"
+      warning: "Email could not be sent"
     show: "Người dùng không tồn tại"
     update: "Hồ sơ cá nhân đã cập nhật"
     destroy: "Người dùng đã bị xóa"
@@ -62,9 +65,6 @@ vi:
   account_control:
     success: "Tài khoản đã được kích hoạt!"
     danger: "Liên kết kích hoạt không hợp lệ"
-  user_mailer:
-    account_activation: "Kích hoạt tài khoản"
-    password_reset: "Đặt lại mật khẩu"
   sessions:
     new:
       login: "Đăng nhập"
@@ -78,6 +78,7 @@ vi:
     error: "lỗi"
   mail:
     account_activation: "Kích hoạt tài khoản"
+    password_reset: "Đặt lại mật khẩu"
   user_mail:
     h1: <h1>Chào mừng bạn đến với Sample App</h1>
     p_html: "<p>Chào mừng %{username} ,</p>"
@@ -110,3 +111,24 @@ vi:
     forgot: "Quên mật khẩu"
     h1: <h1>Quên mật khẩu</h1>
     submit: "Gửi đi"
+  micropost:
+    model:
+      message: "phải là một định dạng hình ảnh hợp lệ"
+      message2: "phải nhỏ hơn 5MB"
+    controller:
+      success: "Bài viết đăng thành công"
+      destroy: "Bài đăng đã được xóa thành công"
+      warning: "Bài đăng bị xóa không thành công"
+      danger: "Lỗi truy cập"
+    html:
+      posted: "Đã đăng"
+      delete: "Xóa bỏ"
+      confirm: "Bạn chắc chắn ?"
+  shared:
+    usefinfo:
+      view: "Xem hồ sơ của tôi"
+      micropost: "micropost"
+    micropost:
+      placeholder: "Soạn micropost mới ..."
+      submit: "Bài đăng"
+      image: "image/jpeg,image/gif,image/png"
