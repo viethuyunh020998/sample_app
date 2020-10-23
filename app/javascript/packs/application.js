@@ -15,8 +15,8 @@ window.jQuery = window.$ = require("jquery")
 var Turbolinks = require("turbolinks");
 Turbolinks.start();
 
-import I18n from "i18n-js"
-window.I18n = I18n
+// import I18n from "i18n-js"
+// window.I18n = I18n
 
 require("packs/upload_image")
 // Uncomment to copy all static images under ../images to the output folder and reference

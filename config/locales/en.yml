@@ -49,6 +49,10 @@ en:
     user_html:
       delete: "Delete"
       confirm: "You Sure ?"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    show:
+      h3: "Microposts"
   users_control:
     checkemail: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn"
     show: "User does not exist"
@@ -88,6 +92,10 @@ en:
       p: <p>This link will expire in two hours.</p>
       pn2: <p>If you did not request your password to be reset,
         please ignore this email and your password will stay as it is.</p>
+    password:
+      forgot: "Forgot password"
+      h1: <h1>Forgot password</h1>
+      submit: "Submit"
   password_control:
     create:
       info: "Email sent with password reset instructions"
@@ -130,3 +138,6 @@ en:
       placeholder: "Compose new micropost..."
       submit: "Post"
       image: "image/jpeg,image/gif,image/png"
+    start:
+      following: "Following"
+      followers: "Followers"

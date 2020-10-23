@@ -1,12 +1,16 @@
-@import 'bootstrap-sprockets';
-@import 'bootstrap';
-$white-color:#fff;
-$color-footer:#777;
-$color-footera:#555;
-$color-footer-hover:#222;
-$color-error_explanation: #FF3300;
-$gray-lighter: #D3D3D3;
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
+$h2-footer-color: #777;
+$logo-color: #fff;
+$footer-gray: #eaeaea;
+$li-color: #e8e8e8;
+$input-color: #bbb;
+$footer-a: #555;
+$footer-a-hover: #222;
+$color-red: red;
+$color-blue: blue;
+$color-gray: gray;
 /* universal */
 body {
   padding-top: 60px;
@@ -24,20 +28,42 @@ textarea {
   margin-bottom: 10px;
 }
 
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $h2-footer-color;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
 /* header */
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color:$white-color;
+  color: $logo-color;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
 }
-
 #logo:hover {
-  color: $white-color;
+  color: $logo-color;
   text-decoration: none;
 }
 
@@ -45,14 +71,14 @@ textarea {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $white-color;
-  color: $color-footer;
+  border-top: 1px solid $footer-gray;
+  color: $h2-footer-color;
 }
 footer a {
-  color: $color-footera;
+  color: $footer-a;
 }
 footer a:hover {
-  color: $color-footer-hover;
+  color: $footer-a-hover;
 }
 footer small {
   float: left;
@@ -67,83 +93,108 @@ footer ul li {
 }
 
 /* mixins, variables, etc. */
-$gray-medium-light: $white-color;
+$gray-medium-light: $footer-gray;
+
 @mixin box_sizing {
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-}
-
-/* miscellaneous */
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
-/* miscellaneous */
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
 /* sidebar */
 aside {
   section.user_info {
-    margin-top: 20 px;
+    margin-top: 20px;
   }
   section {
-    padding: 10 px 0;
-    margin-top: 20 px;
-    & :first-child {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
       border: 0;
       padding-top: 0;
     }
     span {
       display: block;
-      margin-bottom: 3 px;
+      margin-bottom: 3px;
       line-height: 1;
     }
     h1 {
-      font-size: 1.4e m;
+      font-size: 1.4em;
       text-align: left;
-      letter-spacing: -1 px;
-      margin-bottom: 3 px;
-      margin-top: 0 px;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
     }
   }
 }
 .gravatar {
   float: left;
-  margin-right: 10 px;
+  margin-right: 10px;
 }
 .gravatar_edit {
-  margin-top: 15 px;
+  margin-top: 15px;
+}
+
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: $color-gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $color-blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+.users.follow {
+  padding: 0;
 }
 
 /* forms */
 input, textarea, select, .uneditable-input {
-  border: 1 px solid $color-footer;
-  width: 100% ;
-  margin-bottom: 15 px;
+  border: 1px solid $input-color;
+  width: 100%;
+  margin-bottom: 15px;
   @include box_sizing;
 }
 input {
-  height: auto!important;
+  height: auto !important;
 }
 #error_explanation {
-  color: $color-error_explanation;
+  color: $color-red;
   ul {
-    color: $color-error_explanation;
-    margin: 0 0 30 px 0;
+    color: $color-red;
+    margin: 0 0 30px;
   }
 }
 .field_with_errors {
@@ -152,26 +203,27 @@ input {
     color: $state-danger-text;
   }
 }
+
+/* check box */
 .checkbox {
-  margin-top: 10px;
   margin-bottom: 10px;
+  margin-top: 10px;
   span {
-    margin-left: 20px;
     font-weight: normal;
+    margin-left: 20px;
   }
 }
 #session_remember_me {
-  width: auto;
   margin-left: 0;
+  width: auto;
 }
 
 /* Users index */
 .users {
   list-style: none;
-  margin: 10;
+  margin: 0;
   li {
     overflow: auto;
-    margin: 10px ;
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
@@ -183,15 +235,15 @@ input {
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid $white-color;
+    border-top: 1px solid $li-color;
   }
   .user {
-  margin-top: 5em;
-  padding-top: 0;
+    margin-top: 5em;
+    padding-top: 0;
   }
   .content {
-  display: block;
-  margin-left: 60px;
+    display: block;
+    margin-left: 60px;
     img {
       display: block;
       padding: 5px 0;
@@ -208,12 +260,14 @@ input {
     margin-top: 5px;
   }
 }
+
 aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
   }
 }
+
 span.image {
   margin-top: 10px;
   input {

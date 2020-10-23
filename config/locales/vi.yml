@@ -9,6 +9,11 @@ vi:
       home: "Trang Chủ"
       help: "Giúp đỡ"
       login: "Đăng nhập"
+      user: "Người dùng"
+      account: "Tài Khoản"
+      profile: "Hồ sơ"
+      setting: "Cài đặt"
+      logout: "Đăng xuất"
     footer:
       rbor: "Ruby on Rails Tutorial"
       by: "by"
@@ -49,6 +54,10 @@ vi:
     user_html:
       delete: "Xóa bỏ"
       confirm: "Bạn chắc chắn ?"
+    follow: "Theo dõi"
+    unfollow: "Hủy Theo dõi"
+    show:
+      h3: "Microposts"
   users_control:
     checkemail:
       info: "Welcome to the Sample App!"
@@ -132,3 +141,6 @@ vi:
       placeholder: "Soạn micropost mới ..."
       submit: "Bài đăng"
       image: "image/jpeg,image/gif,image/png"
+    stats:
+      following: "Đang theo dõi"
+      followers: "Người theo dõi"

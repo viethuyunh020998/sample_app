@@ -18,11 +18,18 @@ gem "puma", "~> 4.1"
 gem "rails", "~> 6.0.3", ">= 6.0.3.4"
 gem "rails-i18n"
 gem "sass-rails", ">= 6"
-gem "sqlite3", "~> 1.4"
 gem "therubyracer"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 4.0"
 gem "will_paginate", "~> 3.3"
+
+
+group :development do
+  gem "sqlite3"
+end
+group :production do
+  gem "pg"
+end
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
