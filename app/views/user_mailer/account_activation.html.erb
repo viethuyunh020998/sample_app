@@ -1,0 +1,8 @@
+<%= raw t "user_mail.h1" %>
+
+<%= t("user_mail.p_html", username: @user.name) %>
+
+<%= raw t "user_mail.p" %>
+
+<%= link_to t("user_mail.activate"), edit_account_activation_url(locale, id: @user.activation_token,
+  email: @user.email) %>

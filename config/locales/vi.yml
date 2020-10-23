@@ -4,12 +4,12 @@ vi:
     home: "Home"
     help: "Help"
   layouts:
-    _header:
+    header:
       sampleapp: "ứng dụng mẫu"
       home: "Trang Chủ"
       help: "Giúp đỡ"
       login: "Đăng nhập"
-    _footer:
+    footer:
       rbor: "Ruby on Rails Tutorial"
       by: "by"
       new: "New"
@@ -49,14 +49,19 @@ vi:
       delete: "Xóa bỏ"
       confirm: "Bạn chắc chắn ?"
   users_control:
-    create: "Welcome to the Sample App!"
+    checkemail: "Welcome to the Sample App!"
     show: "Người dùng không tồn tại"
     update: "Hồ sơ cá nhân đã cập nhật"
     destroy: "Người dùng đã bị xóa"
-    nodestroy: "Người dùng chua bị xóa"
+    nodestroy: "không thể xóa người dùng !"
     danger: "Vui lòng đăng nhập"
+    found: "Không tìm thấy người dùng!"
   sessions_control:
     danger: "Kết hợp email / mật khẩu không hợp lệ"
+    message: "Tài khoản chưa được kích hoạt.Kiểm tra email của bạn để biết liên kết kích hoạt."
+  account_control:
+    success: "Tài khoản đã được kích hoạt!"
+    danger: "Liên kết kích hoạt không hợp lệ"
   sessions:
     new:
       login: "Đăng nhập"
@@ -66,3 +71,11 @@ vi:
   error_messages:
     contains: "Biểu mẫu chứa %{errors}"
     error: "lỗi"
+  mail:
+    account_activation: "Kích hoạt tài khoản"
+  user_mail:
+    h1: <h1>Chào mừng bạn đến với Sample App</h1>
+    p_html: "<p>Chào mừng %{username} ,</p>"
+    p: "Chào mừng bạn đến với Sample App!
+      Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
+    activate: "Kích hoạt"

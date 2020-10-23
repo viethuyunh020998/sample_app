@@ -4,12 +4,12 @@ en:
     home: "Home"
     help: "Help"
   layouts:
-    _header:
+    header:
       sampleapp: "Sample App"
       home: "Home"
       help: "Help"
       login: "Login"
-    _footer:
+    footer:
       rbor: "Ruby on Rails Tutorial"
       by: "by"
       new: "New"
@@ -56,8 +56,7 @@ en:
       remember: <span>Remember me on this computer</span>
   sessions_control:
     danger: "Invalid email/password combination"
-    message: "Account not activated."
-    message_2: "Check your email for the activation link."
+    message: "Account not activated.Check your email for the activation link."
   users_control:
     checkemail: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn"
     show: "User does not exist"
@@ -72,3 +71,11 @@ en:
   error_messages:
     contains: "The form contains %{errors}"
     error: "error"
+  mail:
+    account_activation: "Account activation"
+  user_mail:
+    h1: <h1>Sample App</h1>
+    p_html: "<p>Hi %{username} ,</p>"
+    p: "Welcome to the Sample App!
+      Click on the link below to activate your account:"
+    activate: "Activate"
