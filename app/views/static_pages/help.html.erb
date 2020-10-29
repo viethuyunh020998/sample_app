@@ -1,12 +1,13 @@
 <% provide(:title, t("base.help")) %>
-<% provide(:base_title, t("base.title"))%>
+<% provide(:base_title, t("base.title")) %>
+
 <div class="center jumbotron">
-  <h1><%= t(".help")%></h1>
+  <h1><%= t".help" %></h1>
   <p>
     <%= t("static_pages.help.get_help") %>
-    <%= link_to t("static_pages.help.rthp"), t("static_pages.help.page_help") %>
+    <%= link_to t("static_pages.help.rthp"), "https://www.railstutorial.org/help" %>
     <%= t("static_pages.help.to_get") %>
-    <%= link_to t("static_pages.help.rthp"), t("static_pages.help.page_book") %>
-    <%= t("static_pages.help.rort")%>
+    <%= link_to t("static_pages.help.rthp"), "https://www.railstutorial.org/book" %>
+    <%= t "static_pages.help.rort" %>
   </p>
 </div>
