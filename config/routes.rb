@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     root "static_pages#home"
     get "/home", to: "static_pages#home"
     get "/help", to: "static_pages#help"
-    get "users/new", to: "users#new"
+    get "/signup", to: "users#new"
+    resources :users, only: [:new,:show, :create]
   end
 end

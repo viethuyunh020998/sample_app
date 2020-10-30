@@ -9,6 +9,10 @@ en:
       home: "Home"
       help: "Help"
       login: "Login"
+    footer:
+      robr: "Ruby on Rails Tutorial"
+      by: "by"
+      new: "New"
   static_pages:
     home:
       sampleapp: "Wellcome to  Sample App"
@@ -21,3 +25,18 @@ en:
       rthp: "Rails Tutorial help page"
       to_get: "To get help with this sample app, see"
       rort: "Ruby on Rails Guide"
+  users:
+    new:
+      title: "Sign up"
+      signup: "Sign Up"
+      name: "Name"
+      password: "Password"
+      confirmation: "Confirmation Password"
+      create_account: "Create my account"
+      error: "The form contains"
+  users_control:
+  warning: "can't find the user"
+  create: "Welcome to the Sample App!"
+  error_messages:
+    contains: "The form contains %{errors}"
+    error: "error"

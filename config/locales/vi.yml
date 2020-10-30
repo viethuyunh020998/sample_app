@@ -9,6 +9,10 @@ vi:
       home: "Trang Chủ"
       help: "Giúp đỡ"
       login: "Đăng nhập"
+    _footer:
+      rbor: "Ruby on Rails Tutorial"
+      by: "by"
+      new: "New"
   static_pages:
     home:
       sampleapp: "Chào mừng bạn đến với Sample App"
@@ -21,3 +25,18 @@ vi:
       rthp: "Rails Tutorial help page"
       to_get: "Để nhận trợ giúp về ứng dụng mẫu này, hãy xem"
       rort: "Sách Hướng dẫn Ruby on Rails"
+  users:
+    new:
+      title: "Đăng kí"
+      signup: "Đăng kí"
+      name: "Tên"
+      password: "Mật khẩu"
+      confirmation: "Xác nhận mật khẩu"
+      create_account: "Tạo tài khoản của tôi"
+      error: "Biểu mẫu chứa"
+  users_control:
+    warning: "không tìm thấy người dùng"
+    create: "Chào mừng bạn đến với Ứng dụng mẫu!"
+  error_messages:
+    contains: "Biểu mẫu chứa %{errors}"
+    error: "lỗi"
