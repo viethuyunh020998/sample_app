@@ -36,6 +36,13 @@ en:
       error: "The form contains"
   users_control:
   warning: "can't find the user"
+  sessions:
+    new:
+      login: "Login"
+      password: "Password"
+      newuser: "New User!"
+      signup: "Sign up now!"
+  users_control:
   create: "Welcome to the Sample App!"
   error_messages:
     contains: "The form contains %{errors}"
