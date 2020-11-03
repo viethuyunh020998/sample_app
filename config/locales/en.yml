@@ -9,8 +9,8 @@ en:
       home: "Home"
       help: "Help"
       login: "Login"
-    footer:
-      robr: "Ruby on Rails Tutorial"
+    _footer:
+      rbor: "Ruby on Rails Tutorial"
       by: "by"
       new: "New"
   static_pages:
@@ -36,12 +36,15 @@ en:
       error: "The form contains"
   users_control:
   warning: "can't find the user"
+  sessions_control:
+    danger: ""
   sessions:
     new:
       login: "Login"
       password: "Password"
       newuser: "New User!"
       signup: "Sign up now!"
+      remember: <span>Remember me on this computer</span>
   users_control:
   create: "Welcome to the Sample App!"
   error_messages:
