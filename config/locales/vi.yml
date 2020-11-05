@@ -62,12 +62,17 @@ vi:
   account_control:
     success: "Tài khoản đã được kích hoạt!"
     danger: "Liên kết kích hoạt không hợp lệ"
+  user_mailer:
+    account_activation: "Kích hoạt tài khoản"
+    password_reset: "Đặt lại mật khẩu"
   sessions:
     new:
       login: "Đăng nhập"
       password: "Mật khẩu"
       newuser: "Người dùng mới"
       remember: <span>Hãy nhớ tôi trên máy tính này</span>
+      forgot: "(Quên mật khẩu)"
+      signup: "Đăng kí ngay"
   error_messages:
     contains: "Biểu mẫu chứa %{errors}"
     error: "lỗi"
@@ -79,3 +84,29 @@ vi:
     p: "Chào mừng bạn đến với Sample App!
       Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
     activate: "Kích hoạt"
+    password_reset:
+      h3: <h3>Để đặt lại mật khẩu của bạn, hãy nhấp vào liên kết bên dưới:</h3>
+      p: <p>Liên kết này sẽ hết hạn sau hai giờ.</p>
+      pn2: <p>Nếu bạn không yêu cầu đặt lại mật khẩu của mình,
+        vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như cũ.</p>
+  password_control:
+    create:
+      info: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
+      danger: "Không tìm thấy địa chỉ email"
+      found: "Không tìm thấy Email người dùng!"
+    validuser:
+      warning: "Địa chỉ email không hợp lệ"
+  password_view:
+    new:
+      title: "Quên mật khẩu"
+      h1: <h1>Quên mật khẩu</h1>
+      submit: "Gửi đi"
+    edit:
+      title: "Đặt lại mật khẩu"
+      h1: <h1>Đặt lại mật khẩu</h1>
+      confirmation: "Xác nhận"
+      update: "Cập nhật mật khẩu"
+  password:
+    forgot: "Quên mật khẩu"
+    h1: <h1>Quên mật khẩu</h1>
+    submit: "Gửi đi"

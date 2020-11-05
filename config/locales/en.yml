@@ -54,6 +54,8 @@ en:
       password: "Password"
       newuser: "New User!"
       remember: <span>Remember me on this computer</span>
+      forgot: "(forgot password)"
+      signup: "Sign up now!"
   sessions_control:
     danger: "Invalid email/password combination"
     message: "Account not activated.Check your email for the activation link."
@@ -73,9 +75,36 @@ en:
     error: "error"
   mail:
     account_activation: "Account activation"
+    password_reset: "Password reset"
   user_mail:
     h1: <h1>Sample App</h1>
     p_html: "<p>Hi %{username} ,</p>"
     p: "Welcome to the Sample App!
       Click on the link below to activate your account:"
     activate: "Activate"
+    password_reset:
+      h3: <h3>To reset your password click the link below:</h3>
+      p: <p>This link will expire in two hours.</p>
+      pn2: <p>If you did not request your password to be reset,
+        please ignore this email and your password will stay as it is.</p>
+  password_control:
+    create:
+      info: "Email sent with password reset instructions"
+      danger: "Email address not found"
+      found: "Email not found!"
+    validuser:
+      warning: "Email address is not valid"
+  password_view:
+    new:
+      title: "Forgot password"
+      h1: <h1>Forgot password</h1>
+      submit: "Submit"
+    edit:
+      title: "Reset password"
+      h1: <h1>Reset password</h1>
+      confirmation: "Confirmation"
+      update: "Update password"
+  password:
+    forgot: "Forgot password"
+    h1: <h1>Forgot password</h1>
+    submit: "Submit"
