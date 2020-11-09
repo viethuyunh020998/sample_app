@@ -44,6 +44,7 @@ yarn-debug.log*
 /config/database.yml
 /test
 /.framgia-ci-reports/rubocop.xml
+/storage
 
 config/settings.local.yml
 config/settings/*.local.yml
